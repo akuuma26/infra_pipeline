@@ -1,4 +1,4 @@
-modules "resource_group" {
+module "resource_group" {
   source   = "../../modules/resource_group"
   name     = var.rg
   location = var.location
