@@ -8,3 +8,4 @@ module "azure_vnet" {
   source     = "../../modules/Virtual_network"
   vnet       = var.vnet
 }
+
