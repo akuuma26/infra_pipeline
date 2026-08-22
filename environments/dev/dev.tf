@@ -6,6 +6,6 @@ module "resource_group" {
 module "azure_vnet" {
   depends_on = [module.resource_group]
   source     = "../../modules/resource_group"
-  vnet       = var.vnet
+  #vnet       = var.vnet
 rg = var.rg
 }
