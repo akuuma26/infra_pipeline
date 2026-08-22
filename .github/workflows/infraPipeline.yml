@@ -33,7 +33,7 @@ jobs:
       
       #step 3: check terraform formatting
       - name: Terraform format check
-        run: terraform fmt
+        run: terraform fmt -check -recursive
 
       #step 4: initialize terraform 
       - name: initialize Terraform
