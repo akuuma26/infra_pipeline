@@ -43,6 +43,10 @@ jobs:
       - name: Terraform validation 
         run: terraform validate
 
+      #step 6: terraform execution plan
+      - name: Terraform execution plan
+        run: terraform plan -out=tfplan
+
 
 
   
