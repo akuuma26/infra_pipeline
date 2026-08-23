@@ -15,8 +15,8 @@ permissions:
   id-token: write
 
 jobs:
-  terraform_validation:
-    name : Terraform Validation
+  terraform_plan:
+    name : Terraform plan
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -55,6 +55,14 @@ jobs:
       #step 7: terraform execution plan
       - name: Terraform execution plan
         run: terraform plan -out=tfplan
+
+      #step 8: Upload Terraform Plan
+      - name: Upload Terraform Plan
+        uses: actions/upload-artifact@v4
+        with:
+          name: terraform-plan
+          path: environments/dev/tfplan
+          if-no-files-found: error
 
 
 
