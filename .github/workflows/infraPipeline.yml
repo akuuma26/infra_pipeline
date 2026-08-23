@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: read
+  id-token: write
 
 jobs:
   terraform_validation:
@@ -35,15 +36,23 @@ jobs:
       - name: Terraform format check
         run: terraform fmt -check -recursive
 
-      #step 4: initialize terraform 
+      #Step 4: azure login
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
+      #step 5: initialize terraform 
       - name: initialize Terraform
         run: terraform init -backend=false
 
-      #step 5: validate terraform configuration
+      #step 6: validate terraform configuration
       - name: Terraform validation 
         run: terraform validate
 
-      #step 6: terraform execution plan
+      #step 7: terraform execution plan
       - name: Terraform execution plan
         run: terraform plan -out=tfplan
 
