@@ -46,7 +46,7 @@ jobs:
 
       #step 5: initialize terraform 
       - name: initialize Terraform
-        run: terraform init -backend=false
+        run: terraform init 
 
       #step 6: validate terraform configuration
       - name: Terraform validation 
@@ -68,6 +68,7 @@ jobs:
     name: Terraform Apply
     needs: terraform_plan
     runs-on: ubuntu-latest
+    environment: dev
 
     defaults:
       run:
@@ -90,7 +91,7 @@ jobs:
           subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
 
       - name: Initialize Terraform
-        run: terraform init -backend=false
+        run: terraform init 
 
       - name: Download Terraform Plan
         uses: actions/download-artifact@v4
