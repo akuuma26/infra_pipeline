@@ -30,5 +30,5 @@ module "network_interface" {
 module "linux_vm" {
   depends_on = [module.network_interface]
   source     = "../childModule/linux_virtual_machine"
-  linuxVm = var.linuxVm
+  linuxVm    = var.linuxVm
 }

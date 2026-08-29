@@ -57,7 +57,7 @@ pip = {
 nic = {
   nic1 = {
     nicName              = "abhi-lz-nic"
-    subnet              = "abhi-lz-subnet"
+    subnet               = "abhi-lz-subnet"
     resource_group_name  = "abhi-lz"
     virtual_network_name = "abhi-lz-vnet"
     pipName              = "abhi-lz-pip"
@@ -65,7 +65,7 @@ nic = {
   }
   nic2 = {
     nicName              = "abhishek-LZ-nic"
-    subnet              = "abhishek-lz-vnet"
+    subnet               = "abhishek-lz-vnet"
     resource_group_name  = "abhishek-LZ"
     virtual_network_name = "abhishek-lz-vnet"
     pipName              = "abhishek-LZ-pip"
@@ -74,13 +74,13 @@ nic = {
 }
 
 linuxVm = {
-    linuxVm1= {
-        vmname = "abhi-lz-vm"
-        resource_group_name  ="abhishek-LZ"
-        location             = "spaincentral"
-        size = "Standard_D2s_v3"
-        admin_username  = "adminuser"
-        nicName              = "abhishek-LZ-nic"
+  linuxVm1 = {
+    vmname              = "abhi-lz-vm"
+    resource_group_name = "abhishek-LZ"
+    location            = "spaincentral"
+    size                = "Standard_D2s_v3"
+    admin_username      = "adminuser"
+    nicName             = "abhishek-LZ-nic"
 
-    }
+  }
 }
