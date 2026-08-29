@@ -81,6 +81,6 @@ linuxVm = {
     size                = "Standard_D2s_v3"
     admin_username      = "adminuser"
     nicName             = "abhishek-LZ-nic"
-
+    admin_password      = "Abhi@#99739"
   }
 }
