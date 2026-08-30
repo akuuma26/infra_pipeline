@@ -11,6 +11,10 @@ rg = {
     name     = "abhishek-LZ-feature"
     location = "spaincentral"
   }
+      rg4 = {
+    name     = "abhishek-LZ-features"
+    location = "spaincentral"
+  }
 }
 
 vnet = {
