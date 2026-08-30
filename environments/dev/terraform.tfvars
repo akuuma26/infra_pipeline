@@ -7,6 +7,10 @@ rg = {
     name     = "abhishek-LZ"
     location = "spaincentral"
   }
+    rg3 = {
+    name     = "abhishek-LZ-feature"
+    location = "spaincentral"
+  }
 }
 
 vnet = {
