@@ -7,11 +7,11 @@ rg = {
     name     = "abhishek-LZ"
     location = "spaincentral"
   }
-    rg3 = {
+  rg3 = {
     name     = "abhishek-LZ-feature"
     location = "spaincentral"
   }
-      rg4 = {
+  rg4 = {
     name     = "abhishek-LZ-features"
     location = "spaincentral"
   }
